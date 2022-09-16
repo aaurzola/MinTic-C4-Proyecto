@@ -9,5 +9,5 @@ Se han incluido las siguientes mejoras:
     *Cuando se selecciona una moneda cambian los iconos a la izquierda del valor para una mejor visualizacion de la moneda
     *Existe un widget Text donde se describe el tipo de conversion que se esta realizando (e.g. EUR -> COP).
 
-<img src="https://user-images.githubusercontent.com/4458129/173209201-ecf02c3e-8571-42a0-92d5-5a9111f5b3b0.gif" width="300" />
+<img src="https://github.com/aaurzola/MinTic-C4-Proyecto/blob/main/Sprint1_demo_G2.gif" width="300" />
 
