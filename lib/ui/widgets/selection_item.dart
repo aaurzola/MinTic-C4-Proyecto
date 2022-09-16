@@ -12,21 +12,21 @@ class SelectionItem extends StatelessWidget {
       height: 60.0,
       child: isForList
           ? Padding(
-              child: _buildItem(context),
-              padding: const EdgeInsets.all(10.0),
-            )
+        child: _buildItem(context),
+        padding: const EdgeInsets.all(10.0),
+      )
           : Card(
-              margin: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Stack(
-                children: <Widget>[
-                  _buildItem(context),
-                  const Align(
-                    alignment: Alignment.centerRight,
-                    child: Icon(Icons.arrow_drop_down),
-                  )
-                ],
-              ),
-            ),
+        margin: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Stack(
+          children: <Widget>[
+            _buildItem(context),
+            const Align(
+              alignment: Alignment.centerRight,
+              child: Icon(Icons.arrow_drop_down),
+            )
+          ],
+        ),
+      ),
     );
   }
 

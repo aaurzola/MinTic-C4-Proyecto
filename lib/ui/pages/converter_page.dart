@@ -22,23 +22,21 @@ class _ConverterPageState extends State<ConverterPage> {
   List<Widget> _buildItems() {
     return currencies
         .map((val) => SelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    // El siguiente widget en el arbol es el Scaffold
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Currency converter'),
+          title: const Text('Group 2 - Currency converter'),
         ),
         body: Column(children: [
           Row(
             children: [
               Expanded(
-                // selector para la primera moneda
                 child: DirectSelect(
                     itemExtent: 45.0,
                     selectedIndex: currency1,
@@ -75,14 +73,15 @@ class _ConverterPageState extends State<ConverterPage> {
               ),
             ],
           ),
-          const Expanded(
-              // TODO
-              // los nombres de las monedas se pueden obtener en la lista currencies
-              // la tasa de cambio se puede obtener en la estructura de datos rates
+          Expanded(
               child: Center(
-            child: Text(
-                'Aquí incluimos el widget KeyPad, mandando los nombres de las dos monedas y la tasa de cambio'),
-          ))
-        ]));
+                  child: KeyPad(
+                      textCurrency1: currencies[currency1],
+                      textCurrency2: currencies[currency2],
+                      rate: rates[currency1][currency2])
+              )
+          )
+        ])
+    );
   }
 }

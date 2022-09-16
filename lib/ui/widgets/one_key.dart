@@ -9,15 +9,13 @@ class OneKey extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO.
-    // te le mides a mejorar este key??
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
         child: MaterialButton(
             key: Key(number.toString()),
             color: Theme.of(context).primaryColor,
-            padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+            padding: const EdgeInsets.fromLTRB(0, 40, 0, 40),
             onPressed: () {
               callback(number);
             },
